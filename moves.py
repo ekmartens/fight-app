@@ -1,6 +1,6 @@
 import random
 
-moves_list = ['Evade Left', 'Garage Door Parry', 'Cut Body Left', 'Cut Leg Left','Cut Head Left', 'Leap', 'Head Swipe', 'Thrust Body Left', 'Corps-a-Corps', 'Parry 8', 'Parry 5', 'Parry 4', 'Parry 7', 'Parry 6', 'Parry 1', 'Parry 3', 'Parry 2', 'Lunge', 'Thrust Body Right', 'Evade Right', 'Duck', 'Jump Back', 'Punto Reverso', 'Lunge & Redouble', 'Cut Head Right', 'Cut Body Right', 'Cut Leg Right', 'Parry 12']
+moves_list = ['Evade Left', 'Garage Door Parry', 'Cut Body Left', 'Cut Leg Left','Cut Head Left', 'Leap', 'Head Swipe', 'Thrust Body Left', 'Corps-a-Corps', 'Parry 8', 'Parry 5', 'Parry 4', 'Parry 7', 'Parry 6', 'Parry 1', 'Parry 3', 'Parry 2', 'Lunge', 'Thrust Body Right', 'Evade Right', 'Duck', 'Jump Back', 'Punto Reverso', 'Lunge & Redouble', 'Cut Head Right', 'Cut Body Right', 'Cut Leg Right', 'Parry 12', 'React', 'Knee Body Right', 'Knee Body Left', 'Thrust Kick', 'Pommel Strike', 'Elbow Body']
 
 def moves_index(m):
     # m = random.choice(moves)
@@ -107,6 +107,12 @@ def moves_index(m):
         return 'A: ' + m + ' -> B: ' + react
     elif m == 'Parry 12':
         return 'B: Cut Leg Left -> A: ' + m
+    elif m == 'React':
+        reaction = ['Knee Body Right', 'Knee Body Left', 'Thrust Kick', 'Pommel Strike', 'Cut Body Right', 'Cut Body Left', 'Cut Leg Right', 'Cut Leg Left']
+        react = random.choice(reaction)
+        return 'B: ' + react + ' -> A: ' + m
+    else:
+        return 'B: ' + m + ' -> A: React'
 
 
 for moves in moves_list:

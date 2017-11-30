@@ -45,7 +45,7 @@ def moves_index(m):
         react = random.choice(reaction)
         return 'B: ' + react + ' -> A: ' + m
     elif m == 'Parry 7':
-        reaction = ['Cut Leg Right', 'Cut Body Right', 'Thurst Body Right']
+        reaction = ['Cut Leg Right', 'Cut Body Right', 'Thrust Body Right']
         react = random.choice(reaction)
         return 'B: ' + react + ' -> A: ' + m
     elif m == 'Parry 6':
@@ -67,7 +67,7 @@ def moves_index(m):
         return 'B: ' + react + ' -> A: ' + m
     elif m == 'Lunge':
         reaction = ['Jump Back/Parry 2', 'Parry 1', 'Parry 2', 'Parry 3', 'Parry 4', 'Jump Back/Parry 2', 'Parry 1', 'Parry 2', 'Parry 3', 'Parry 4', 'Garage Door Parry']
-        react = reandom.choice(reaction)
+        react = random.choice(reaction)
         return 'A: ' + m + ' -> B: ' + react
     elif m == 'Thrust Body Right':
         reaction = ['Parry 4', 'High Parry 1']
@@ -76,11 +76,11 @@ def moves_index(m):
     elif m == 'Evade Right':
         reaction = ['Cut Head', 'Diagonal Head Swipe']
         react = random.choice(reaction)
-        return "B: " + choice + " -> A: " + m
+        return "B: " + react + " -> A: " + m
     elif m == 'Duck':
         reaction = ['Overhead Swipe', 'Cut Head Left', 'Cut Head Right']
         react = random.choice(reaction)
-        return 'B: ' + choice + ' -> A: ' + m
+        return 'B: ' + react + ' -> A: ' + m
     elif m == 'Jump Back':
         reaction = ['Thrust Body Right', 'Thrust Body Left', 'Lunge','Thrust Body Right', 'Thrust Body Left', 'Lunge', 'Ballestra/Lunge']
         react = random.choice(reaction)
@@ -90,10 +90,24 @@ def moves_index(m):
         react = random.choice(reaction)
         return 'A: ' + m + ' -> B: ' + react
     elif m == 'Lunge & Redouble':
-        reaction = ['Parry 1/Circle Parry 1', 'Parry 1/Parry2', 'Parry 1/Parry 3', 'Parry 1/Parry 4', 'Parry 2/Circle Parry 2', 'Parry 2/Parry 1', 'Parry 2/Parry 3', 'Parry 2/Parry 4', 'Parry 3/Circle Parry 3', 'Parry 3/Parry 4']
+        reaction = ['Parry 1/Circle Parry 1', 'Parry 1/Parry2', 'Parry 1/Parry 3', 'Parry 1/Parry 4', 'Parry 2/Circle Parry 2', 'Parry 2/Parry 1', 'Parry 2/Parry 3', 'Parry 2/Parry 4', 'Parry 3/Circle Parry 3', 'Parry 3/Parry 4', 'Parry 3/Parry 2', 'Parry 3/Parry 1', 'Parry 4/Circle Parry 4', 'Parry 4/Parry 3', 'Parry 4/Parry 2', 'Parry 4/Parry 1']
+        react = random.choice(reaction)
+        return 'A: ' + m + ' -> B: ' + react
+    elif m == 'Cut Head Right':
+        reaction = ['High Parry 3', 'Parry 5', 'Evade Right/Hanging Parry 5']
+        react = random.choice(reaction)
+        return 'A: ' + m + ' -> B: ' + react
+    elif m == 'Cut Body Right':
+        reaction = ['Parry 3', 'Parry 3', 'High Parry 1']
+        react = random.choice(reaction)
+        return 'A: ' + m + ' -> B: ' + react
+    elif m == 'Cut Leg Right':
+        reaction = ['Parry 2', 'Parry 2', 'Parry 7']
+        react = random.choice(reaction)
+        return 'A: ' + m + ' -> B: ' + react
+    elif m == 'Parry 12':
+        return 'B: Cut Leg Left -> A: ' + m
 
-
-moves_list2 = [ 'Lunge & Redouble', 'Cut Head Right', 'Cut Body Right', 'Cut Leg Right', 'Parry 12']
 
 for moves in moves_list:
     l = moves_index(moves)

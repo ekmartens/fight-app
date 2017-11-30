@@ -62,9 +62,38 @@ def moves_index(m):
         else:
             return 'B: ' + react + ' -> A: ' + m
     elif m == 'Parry 2':
-        reaction = []
+        reaction = ['Cut Leg Left', 'Thrust Leg Left']
+        react = random.choice(reaction)
+        return 'B: ' + react + ' -> A: ' + m
+    elif m == 'Lunge':
+        reaction = ['Jump Back/Parry 2', 'Parry 1', 'Parry 2', 'Parry 3', 'Parry 4', 'Jump Back/Parry 2', 'Parry 1', 'Parry 2', 'Parry 3', 'Parry 4', 'Garage Door Parry']
+        react = reandom.choice(reaction)
+        return 'A: ' + m + ' -> B: ' + react
+    elif m == 'Thrust Body Right':
+        reaction = ['Parry 4', 'High Parry 1']
+        react = random.choice(reaction)
+        return "A: " + m + ' -> B: ' + react
+    elif m == 'Evade Right':
+        reaction = ['Cut Head', 'Diagonal Head Swipe']
+        react = random.choice(reaction)
+        return "B: " + choice + " -> A: " + m
+    elif m == 'Duck':
+        reaction = ['Overhead Swipe', 'Cut Head Left', 'Cut Head Right']
+        react = random.choice(reaction)
+        return 'B: ' + choice + ' -> A: ' + m
+    elif m == 'Jump Back':
+        reaction = ['Thrust Body Right', 'Thrust Body Left', 'Lunge','Thrust Body Right', 'Thrust Body Left', 'Lunge', 'Ballestra/Lunge']
+        react = random.choice(reaction)
+        return 'B: ' + react + ' -> A: ' + m
+    elif m == 'Punto Reverso':
+        reaction = ['High Parry 2/Circle Head', 'Vault Left/Parry 3', 'Vault Right/Parry 4']
+        react = random.choice(reaction)
+        return 'A: ' + m + ' -> B: ' + react
+    elif m == 'Lunge & Redouble':
+        reaction = ['Parry 1/Circle Parry 1', 'Parry 1/Parry2', 'Parry 1/Parry 3', 'Parry 1/Parry 4', 'Parry 2/Circle Parry 2', 'Parry 2/Parry 1', 'Parry 2/Parry 3', 'Parry 2/Parry 4', 'Parry 3/Circle Parry 3', 'Parry 3/Parry 4']
 
-moves_list2 = ['Lunge', 'Thrust Body Right', 'Evade Right', 'Duck', 'Jump Back', 'Punto Reverso', 'Lunge & Redouble', 'Cut Head Right', 'Cut Body Right', 'Cut Leg Right', 'Parry 12']
+
+moves_list2 = [ 'Lunge & Redouble', 'Cut Head Right', 'Cut Body Right', 'Cut Leg Right', 'Parry 12']
 
 for moves in moves_list:
     l = moves_index(moves)
